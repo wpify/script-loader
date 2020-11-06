@@ -18,8 +18,6 @@ module.exports = (src, id = null) => {
       var js = document.createElement('script');
       js.id = id;
       js.src = src;
-      js.async = true;
-      js.defer = true;
       js.addEventListener('load', resolve);
       js.addEventListener('error', e => reject(e.error));
       js.src = src;
